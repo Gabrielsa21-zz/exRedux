@@ -1,4 +1,3 @@
-import { reducer as reduxFormReducer } from 'redux-form';
 import thunk from 'redux-thunk';
 import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
 import {

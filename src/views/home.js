@@ -10,6 +10,7 @@ class Home extends PureComponent {
     }
 
     onSubmit = (e) => {
+        console.log("function")
         e.preventDefault()
         //"action é basicamente ações do usuario")
         //se o usuario clicou no botao gerou uma ação")
@@ -18,6 +19,7 @@ class Home extends PureComponent {
         this.props.dispatch(callActionButton());
     }
     render() {
+        console.log(this.props)
         // const { handleSubmit, previousPage, onSubmit} = this.props;
         return (
             <div className="App">
@@ -35,17 +37,17 @@ class Home extends PureComponent {
                         Learn React
                     </a>
                 </header>
-                {this.props.bnt}
+                {/* {this.props.bnt} */}
+                
                 {/* apos o click veja o redux funcionando! it's easy */}
             </div>
         )
     }
 }
 
-Home = connect(state => {
+
+export default connect(state => {
     return {
         bnt: state.bnt
-    };
+    }
 })(Home);
-
-export default Home;
